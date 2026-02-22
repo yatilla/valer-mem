@@ -616,7 +616,7 @@ window.goToCal = function(key) {
   showPage('Calendar',document.querySelectorAll('.bn-item')[0]); renderCal();
 };
 
-// ─── LEAGUE ───
+// ─── LEAGUE of team ───
 function renderLeague() {
   const sorted=[...P].map(p=>({...p,sc:pSc(p.id),m:pMet(p.id),b:calcBadges(p.id)})).sort((a,b)=>b.sc-a.sc);
   const max=Math.max(...sorted.map(s=>s.sc),1);
