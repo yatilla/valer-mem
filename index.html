@@ -681,7 +681,9 @@ window.openModal = function(y,m,d,key) {
   refreshModal();
   renderSuggestions(key);
   document.getElementById('sugInput').value='';
-  document.getElementById('modalOverlay').classList.add('open');
+  const ov=document.getElementById('modalOverlay');
+  document.body.appendChild(ov);
+  ov.classList.add('open');
 };
 window.maybeClose = function(e){if(e.target===document.getElementById('modalOverlay'))closeModal();};
 window.closeModal = function(){document.getElementById('modalOverlay').classList.remove('open');};
